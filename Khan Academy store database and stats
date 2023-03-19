@@ -1,0 +1,20 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, stock INTEGER, department TEXT);
+
+INSERT INTO store VALUES (1,"basketball",20,5,"sports");
+INSERT INTO store VALUES(2,"baseball",15,9,"sports");
+INSERT INTO store VALUES(3,"bikes",120,10,"outdoor");
+INSERT INTO store VALUES(4,"Harry Potter",15,97,"books");
+INSERT INTO store VALUES(5,"LOTR",15,81,"books");
+INSERT INTO store VALUES(6,"lego",60,52,"toys/games");
+INSERT INTO store VALUES(7,"Settlers of Catan",55,20,"toys/games");
+INSERT INTO store VALUES(8,"Clue",30,14,"toys/games");
+INSERT INTO store VALUES(9,"Star Wars",75,36,"movies");
+INSERT INTO store VALUES(10,"Knives Out",25,18,"movies");
+INSERT INTO store VALUES(11,"Happy Gilmore",5,16,"movies");
+INSERT INTO store VALUES(12,"bananas",2,19,"groceries");
+INSERT INTO store VALUES(13,"oranges",1,14,"groceries");
+INSERT INTO store VALUES(14,"chocolate",1.50,82,"groceries");
+INSERT INTO store VALUES(15,"milk",5,20,"groceries");
+
+SELECT * FROM store ORDER BY price desc;
+SELECT department, SUM(price) FROM store GROUP BY department;
