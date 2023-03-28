@@ -1,0 +1,42 @@
+Create Table famous_people (id INTEGER PRIMARY KEY, fullname TEXT,profession INTEGER);
+
+INSERT INTO famous_people (fullname,profession)
+Values ("Taylor Swift",1);
+INSERT INTO famous_people (fullname,profession)
+Values ("Hunter Pence",2);
+INSERT INTO famous_people (fullname,profession)
+Values ("Elton John",1);
+INSERT INTO famous_people (fullname,profession)
+Values ("George Clooney",3);
+INSERT INTO famous_people (fullname,profession)
+Values ("Cameron Diaz",3);
+INSERT INTO famous_people (fullname,profession)
+Values ("Mark Wahlberg",3);
+INSERT INTO famous_people (fullname,profession)
+Values ("Dak Prescott",2);
+INSERT INTO famous_people (fullname,profession)
+Values ("Bruno Mars",1);
+INSERT INTO famous_people (fullname,profession)
+Values ("Steve Nash",2);
+INSERT INTO famous_people (fullname,profession)
+Values ("Miley Cyrus",1);
+INSERT INTO famous_people (fullname,profession)
+Values ("JRR Tolkien",4);
+INSERT INTO famous_people (fullname,profession)
+Values ("George RR Martin",4);
+INSERT INTO famous_people (fullname,profession)
+Values ("Timothy Zahn",4);
+INSERT INTO famous_people (fullname,profession)
+Values ("Stephen King",4);
+INSERT INTO famous_people (fullname,profession)
+Values ("Devin Booker",2);
+
+Create table profession (id INTEGER, profession TEXT);
+INSERT INTO profession Values (1, "Singer");
+Insert into profession Values (2, "Athlete");
+Insert into profession Values (3, "Actor");
+Insert into profession Values (4, "Author");
+
+select famous_people.fullname, profession.profession from famous_people
+join profession
+on famous_people.profession = profession.id;
