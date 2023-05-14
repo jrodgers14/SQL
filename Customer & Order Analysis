@@ -84,8 +84,3 @@ GROUP BY Product
 Order BY Total_Rev desc
 LIMIT 1;
 
-#14 List all the products sold in Los Angeles in February, and include how many of each were sold.
-SELECT Product, sum(quantity)
-FROM BIT_DB.FebSales
-WHERE location like '%Los Angeles%'
-GROUP BY Product;
