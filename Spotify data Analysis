@@ -1,0 +1,12 @@
+#1 Who are the top 10 most popular artists, based on average popularity?
+SELECT artist_name, avg(popularity)
+FROM BIT_DB.Spotifydata
+GROUP BY artist_name
+ORDER BY avg(popularity) desc
+LIMIT 10;
+
+#2 List each track by Doja Cat and the length of each track in seconds from shortest to longest.
+SELECT track_name, duration_ms/1000 as seconds
+FROM BIT_DB.Spotifydata
+WHERE artist_name = 'Doja Cat'
+ORDER BY seconds asc
